@@ -342,7 +342,8 @@ body {
 
 .tableWrapper{
   max-width:700px;
-  margin:0 auto;
+  /* push the table downward */
+  margin:70px auto 0;
   background:#fff;
   border:1px solid #333;
 }
