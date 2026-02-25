@@ -516,3 +516,28 @@ body {
     width: 420px;
   }
 }
+
+.tableWrapper{
+  max-width:700px;
+  /* push the table downward */
+  margin:70px auto 0;
+  background:#fff;
+  border:1px solid #333;
+}
+
+.tableTitle{
+  text-align:center;
+  padding:10px;
+  font-weight:700;
+  border-bottom:1px solid #333;
+}
+
+.customTable{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.customTable td{
+  height:60px;
+  border:1px solid #333;
+}
