@@ -305,6 +305,39 @@ body {
   bottom: 40px;
   background: rgba(123, 47, 247, 0.55);
 }
+ .hero-imageWrap {
+    width: 420px;
+  }
+
+
+
+.section {
+  padding: 60px 0;
+}
+.tableWrapper{
+  max-width:700px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid #333;
+}
+
+.tableTitle{
+  text-align:center;
+  padding:10px;
+  font-weight:700;
+  border-bottom:1px solid #333;
+}
+
+.customTable{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.customTable td{
+  height:60px;
+  border:1px solid #333;
+}
+
 
 /* Responsive */
 @media (max-width: 900px) {

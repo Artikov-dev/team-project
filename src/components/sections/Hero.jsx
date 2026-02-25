@@ -1,8 +1,8 @@
 export default function Hero() {
   const hits = [
-    { title: "Top Artist", subtitle: "Pop hits", tag: "New" },
-    { title: "Top Mix", subtitle: "Daily mix", tag: "Hot" },
-    { title: "Concert Vibes", subtitle: "Live songs", tag: "Live" },
+    { title: "Top Artist", subtitle: "Pop hits", tag: "New", img: "https://audibg.com/forum/uploads/profile/photo-thumb-82528.jpg" },
+    { title: "Top Mix", subtitle: "Daily mix", tag: "Hot", img: "https://yt3.googleusercontent.com/ytc/AIdro_mQQ2R-ORtCEJT8BHQN9zAngH_SeVnXCZtQySbSUYBjcw=s900-c-k-c0x00ffffff-no-rj" },
+    { title: "Concert Vibes", subtitle: "Live songs", tag: "Live", img: "https://yt3.googleusercontent.com/ytc/AIdro_mQQ2R-ORtCEJT8BHQN9zAngH_SeVnXCZtQySbSUYBjcw=s900-c-k-c0x00ffffff-no-rj" },
   ];
 
   return (
@@ -43,7 +43,13 @@ export default function Hero() {
                     <span className="hit-tag">{item.tag}</span>
                   </div>
 
-                  <div className="hit-avatar" aria-hidden="true" />
+                  <div className="hit-avatar" aria-hidden="true">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "16px" }}
+                    />
+                  </div>
 
                   <div className="hit-meta">
                     <div className="hit-title">{item.title}</div>
@@ -53,6 +59,23 @@ export default function Hero() {
               ))}
             </div>
           </div>
+        {/* Random images for hit cards */}
+        {hits.map((item, idx) => {
+          const images = [
+            "https://audibg.com/forum/uploads/profile/photo-thumb-82528.jpg",
+            "https://yt3.googleusercontent.com/ytc/AIdro_mQQ2R-ORtCEJT8BHQN9zAngH_SeVnXCZtQySbSUYBjcw=s900-c-k-c0x00ffffff-no-rj",
+            "https://yt3.googleusercontent.com/ytc/AIdro_mQQ2R-ORtCEJT8BHQN9zAngH_SeVnXCZtQySbSUYBjcw=s900-c-k-c0x00ffffff-no-rj"
+          ];
+          const randomImage = images[Math.floor(Math.random() * images.length)];
+          return (
+            <img 
+              key={`img-${idx}`} 
+              src={randomImage} 
+              alt={item.title}
+              style={{ display: "none" }}
+            />
+          );
+        })}
         </div>
 
         {/* RIGHT (placeholder image) */}

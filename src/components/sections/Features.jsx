@@ -1,9 +1,39 @@
+import Container from "../layout/Container.jsx";
+
 export default function Features() {
   return (
-    <section>
-      <div className="container">
-        <h2>Features Section</h2>
-      </div>
-    </section>
+    <>
+      <section>
+        <div className="container">
+        </div>
+      </section>
+      <section className="section">
+        <Container>
+          <div className="tableWrapper">
+            <div className="tableTitle">Table</div>
+
+            <table className="customTable">
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
